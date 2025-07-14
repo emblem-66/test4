@@ -17,8 +17,8 @@ RUN uname -r \
 # && dnf install -y rootfiles \
  && dnf group install -y critical-path-base \
  && dnf group install -y critical-path-gnome \
- && dnf group install -y core \
- && dnf group install -y base-graphical  \
+# && dnf group install -y core \
+# && dnf group install -y base-graphical  \
 # && dnf remove -y \
 #    firefox* \
 #    gnome-shell-extension* \
