@@ -1,4 +1,4 @@
-name: Silverblue
+name: ${{ github.actor }}/${{ github.event.repository.name }}
 
 on:
   schedule:
