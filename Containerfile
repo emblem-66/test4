@@ -13,7 +13,9 @@ RUN uname -r \
 # && git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita/ \
  && dnf install -y dnf5-plugins \
 # && dnf install -y rootfiles \
- && dnf group install -y critical-path-base critical-path-gnome \ #core \
+ && dnf group install -y critical-path-base \
+ && dnf group install -y critical-path-gnome \
+# && dnf group install -y core \
  && dnf group install -y base-graphical  \
 # && dnf remove -y \
 #    firefox* \
