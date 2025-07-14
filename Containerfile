@@ -12,7 +12,8 @@ RUN uname -r \
 # && echo -e "[Unit]\nDescription=Update Flatpaks\n[Timer]\nOnCalendar=*:0/4\nPersistent=true\n[Install]\nWantedBy=timers.target\n" | tee /etc/systemd/system/flatpak-update.timer \
 # && git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita/ \
  && dnf install -y dnf5-plugins \
- && dnf group install -y core \
+ && dnf install -y rootfiles \
+ && dnf group install -y critical-path-base critical-path-gnome \ #core \
  && dnf group install -y base-graphical  \
 # && dnf remove -y \
 #    firefox* \
