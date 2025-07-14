@@ -1,4 +1,4 @@
-name: ${{ github.actor }}/${{ github.event.repository.name }}
+name: bootc
 
 on:
   schedule:
