@@ -39,7 +39,7 @@ RUN uname -r \
     nautilus \
  && dnf install -y langpacks-en firewalld openssh tailscale git curl wget rsync \
  && systemctl set-default graphical.target \
- && systemctl enable \
+ && systemctl enable --dry-run \
 #    rpm-ostreed-automatic.timer \
 #    flatpak-update.timer \
     sshd.service \
