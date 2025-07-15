@@ -14,10 +14,10 @@ RUN uname -r \
  && dnf clean all \
  && dnf update \
  && dnf install -y dnf5-plugins \
- && rpm-ostree install -y rootfiles \
  && dnf group install -y critical-path-base \
  && dnf group install -y critical-path-gnome \
 # && dnf group install -y core \
+ && dnf install -y @core \
 # && dnf group install -y base-graphical  \
 # && dnf remove -y \
 #    firefox* \
