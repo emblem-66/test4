@@ -14,7 +14,7 @@ RUN uname -r \
  && dnf clean all \
  && dnf update \
  && dnf install -y dnf5-plugins \
-# && dnf install -y rootfiles \
+ && rpm-ostree install -y rootfiles \
  && dnf group install -y critical-path-base \
  && dnf group install -y critical-path-gnome \
 # && dnf group install -y core \
