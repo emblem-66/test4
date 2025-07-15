@@ -12,7 +12,7 @@ RUN uname -r \
 # && echo -e "[Unit]\nDescription=Update Flatpaks\n[Timer]\nOnCalendar=*:0/4\nPersistent=true\n[Install]\nWantedBy=timers.target\n" | tee /etc/systemd/system/flatpak-update.timer \
 # && git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita/ \
  && dnf clean all \
- && dnf update-y \
+ && dnf update -y \
  && dnf install -y dnf5-plugins \
  && dnf group install -y critical-path-base \
  && dnf group install -y critical-path-gnome \
