@@ -44,9 +44,10 @@ RUN uname -r \
     tailscaled.service \
     firewalld.service \
  && systemctl mask remount-fs.service \
+ && dnf autoremove -y \
  && dnf clean all \
  && rpm-ostree cleanup -m \
  && rm -rf /var/* /tmp/* \
- && ostree container commit \
- && bootc container lint
-RUN rpm -qa | sort
+ && ostree container commit
+RUN bootc container lint
+RUN rpm -qa | sort && jq -r .packages[] /usr/share/rpm-ostree/treefile.json
