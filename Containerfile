@@ -1,4 +1,5 @@
 FROM quay.io/fedora/fedora-bootc:latest
+rpm -qa | sort && jq -r .packages[] /usr/share/rpm-ostree/treefile.json
 RUN uname -r \
 # && sed -i 's/#AutomaticUpdatePolicy=none/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf \
 # && sed -i 's/enabled=1/enabled=0/' \
@@ -48,6 +49,5 @@ RUN uname -r \
  && dnf clean all \
  && rpm-ostree cleanup -m \
  && rm -rf /var/* /tmp/* \
- && ostree container commit
-RUN bootc container lint
-RUN rpm -qa | sort && jq -r .packages[] /usr/share/rpm-ostree/treefile.json
+ && ostree container commit \
+ && bootc container lint
