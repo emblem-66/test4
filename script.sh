@@ -60,7 +60,7 @@ dnf install -y \
 
 #dnf clean all
 
-dnf install -y --allowerasing ffmpeg libavcodec-freeworld mesa*freeworld
+dnf install -y --allowerasing ffmpeg libavcodec-freeworld mesa*freeworld steam
 
 #rpm -e --verbose dnf dnf-data python3-dnf
 
