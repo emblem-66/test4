@@ -1,14 +1,10 @@
 #!/bin/bash
 set -xeuo pipefail
 
-rpm -qa | sort
-
-rpm -qa 'qemu-user-static*' | xargs dnf remove -y
-rpm -qa '*backgrounds*' | xargs dnf remove -y
-rpm -qa 'firefox*' | xargs dnf remove -y
+jq -r .packages[] /usr/share/rpm-ostree/treefile.json > /usr/local/share/kde-bootc/packages-fedora-bootc
 
 rpm -qa | sort
 
-dnf remove -y sway
+#rpm -qa 'qemu-user-static*' | xargs dnf remove -y
 
-rpm -qa | sort
+#rpm -qa | sort
