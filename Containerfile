@@ -5,7 +5,7 @@ COPY --chmod=755 script.sh /
 #FROM quay.io/fedora/fedora-bootc:latest
 #FROM quay.io/centos/centos:latest
 #FROM quay.io/almalinuxorg/almalinux-bootc:latest
-FROM quay.io/fedora/fedora-sericea:latest
+FROM quay.io/fedora/fedora-sway-atomic:latest
 
 ### MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
