@@ -1,4 +1,4 @@
-name: build container
+name: bootc container
 on:
   workflow_dispatch:
   schedule:
